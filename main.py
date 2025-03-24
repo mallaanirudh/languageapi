@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 # Ensure Google Cloud credentials are set
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\malla\Downloads\silicon-vertex-439907-p1-9f214af6b2e8.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"fewhoiejoifj######################"
 #Ensure that when you deploy use the path that exist on the local machine after you download the json file from google account.
 #the above path is my path on my local machine
 # Function to record audio from the microphone
