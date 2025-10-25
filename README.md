@@ -74,14 +74,7 @@ Before running the application, ensure you have the following installed:
         * JSON payload with an optional `duration` field (in seconds).
     * **Response:**
         * JSON object with `transcribed_text` and `detected_language` fields.
-        * Returns an error message if no text is detected.
-
-## File Structure
-Markdown
-
-# Voice Language Detection API with Flask
-
-This project provides a Flask-based API that records audio from the microphone, transcribes it using Google Cloud Speech-to-Text, and detects the language of the transcribed text using the `langdetect` library.
+        * Returns an error message if no text is detected
 
 ## Prerequisites
 
@@ -97,41 +90,7 @@ Before running the application, ensure you have the following installed:
 * **wave:** for saving audio files.
 * **langdetect:** for language detection.
 * **google-cloud-speech:** for speech-to-text.
-* **Flask:** for the web application.
-
-## Installation
-
-1.  **Clone the repository (if applicable):**
-
-    ```bash
-    git clone <repository_url>
-    cd <repository_directory>
-    ```
-
-2.  **Install the required Python packages:**
-
-    ```bash
-    pip install Flask pyaudio wave langdetect google-cloud-speech
-    ```
-
-3.  **Set Google Cloud Credentials:**
-
-    * Download your Google Cloud service account JSON file.
-    * Replace `"fewhoiejoifj######################"` in the python code, with the correct path to your json file.
-    * Alternatively, set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable:
-
-    ```bash
-    export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/credentials.json"
-    ```
-    * On windows, replace export with set.
-
-4.  **Run the Flask application:**
-
-    ```bash
-    python app.py
-    ```
-
-    The application will start running on `http://127.0.0.1:5000/`.
+* **Flask:** for the web application
 
 ## Usage
 
@@ -146,15 +105,6 @@ Before running the application, ensure you have the following installed:
     * The API transcribes the audio and detects the language.
     * The result (transcribed text and detected language) is displayed on the web page.
 
-## API Endpoint
-
-* **`/detect_language` (POST):**
-    * Records audio, transcribes it, and detects the language.
-    * **Request:**
-        * JSON payload with an optional `duration` field (in seconds).
-    * **Response:**
-        * JSON object with `transcribed_text` and `detected_language` fields.
-        * Returns an error message if no text is detected.
 
 ## File Structure
 
@@ -166,17 +116,6 @@ voice-language-detection/
 `app.py`: The main Flask application.
 * `templates/index.html`: The HTML page for the web interface.
 * `README.md`: This documentation.
-
-## Google Cloud Setup
-
-1.  **Create a GCP project:** If you don't have one already.
-2.  **Enable the Speech-to-Text API:** In the GCP Console, go to the API Library and enable the Speech-to-Text API.
-3.  **Create a service account:**
-    * Go to IAM & Admin > Service Accounts.
-    * Create a new service account.
-    * Grant the service account the "Speech-to-Text Admin" or "Speech-to-Text User" role.
-    * Download the service account JSON key file.
-4.  **Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable:** As described in the Installation section.
 
 ## Notes
 
