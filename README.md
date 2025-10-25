@@ -92,20 +92,6 @@ Before running the application, ensure you have the following installed:
 * **google-cloud-speech:** for speech-to-text.
 * **Flask:** for the web application
 
-## Usage
-
-1.  **Access the web interface:**
-    * Open your web browser and navigate to `http://127.0.0.1:5000/`.
-    * Ensure that an index.html file exists in the templates folder. The index.html file, should have client side javascript that records audio, and then sends it to the /detect_language endpoint.
-2.  **Record audio:**
-    * The web page should provide a button or interface to start recording audio from your microphone.
-    * The audio will be recorded for a specified duration (default is 10 seconds).
-3.  **Detect language:**
-    * After recording, the audio is sent to the `/detect_language` API endpoint.
-    * The API transcribes the audio and detects the language.
-    * The result (transcribed text and detected language) is displayed on the web page.
-
-
 ## File Structure
 
 voice-language-detection/
