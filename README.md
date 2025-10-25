@@ -101,7 +101,6 @@ voice-language-detection/
 └── README.md
 `app.py`: The main Flask application.
 * `templates/index.html`: The HTML page for the web interface.
-* `README.md`: This documentation.
 
 ## Notes
 
